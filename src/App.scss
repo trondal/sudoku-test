@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -20vh;
+}
+
+$base-size: 500;
+
+.game {
+  width: #{$base-size}px;
+  height: #{$base-size}px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.block {
+  width: #{$base-size / 3 - 1}px;
+  height: #{$base-size / 3 - 1}px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.square,
+.select {
+  width: #{$base-size / 9 - 1}px;
+  height: #{$base-size / 9 - 1}px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.clicked-square {
+  background-color: lightslategray;
+}
